@@ -43,27 +43,23 @@ int main(int argc, char const *argv[])
         
             for (size_t j = 0; j < arr.size(); j++)
             {
-                if (clock.getElapsedTime().asSeconds() > 0.1){
-                std::cout << clock.getElapsedTime().asSeconds();
-                for (size_t i = j; i < arr.size(); i++)
-                {
-
-                    height = arr[i];
-                    e.y = height;
-                    
-                    
-                    int uwu;
-                    if (arr[j] > arr[i])
-                    {
-                        uwu = arr[j];
-                        arr[j] = arr[i];
-                        arr[i] = arr[j];
+                    for (size_t i = j; i < arr.size(); i++){
+                        if (clock.getElapsedTime().asSeconds() > 0.1){
+                        printf("iwi");
+                        height = arr[i];
+                        e.y = height;
+                        
+                        if (arr[j] > arr[i]) {
+                            int uwu = arr[j];
+                            arr[j] = arr[i];
+                            arr[i] = arr[j];
+                        }
+                        clock.restart();
+                        uwu.play();
                     }
-
-                }
-                clock.restart();
-                uwu.play();
+                
             }
+            //else{j--;}
             
         }
         for (size_t i = 0; i < arr.size(); i++){
