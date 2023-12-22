@@ -10,10 +10,7 @@ int main(int argc, char const *argv[]){
     sf::Clock clock;
     sf::Vector2f e(width,height);
     sf::Vector2u v(600,600);
-    sf::SoundBuffer uwuBuffer;
-    uwuBuffer.loadFromFile("uwu.mp3");
-    sf::Sound uwu;
-    uwu.setBuffer(uwuBuffer);
+
     
     std::vector<sf::RectangleShape> rectangles;
     std::vector<int> arr = {50,30,500,222,180,333,121,531,112,45,96,221};
@@ -40,11 +37,10 @@ int main(int argc, char const *argv[]){
         }
         window.clear();
         if (clock.getElapsedTime().asSeconds() > 0.1){
-            //printf("e");
+
             change = true;
             if (j < arr.size()){
                 if(i < arr.size()){
-                    printf("iwi");
                     height = arr[i];
                     e.y = height;
                     if (arr[j] > arr[i]) {
@@ -69,8 +65,6 @@ int main(int argc, char const *argv[]){
             if (k == i && change){
                 rectangles[k].setFillColor(sf::Color().Blue);
             }
-        
-            
             rectangles[k].setSize(e);
             rectangles[k].setPosition(k*50, 600-height);
             rectangles[k].setSize(e);
